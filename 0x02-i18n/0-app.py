@@ -1,23 +1,21 @@
-from flask import render_template
+#!/usr/bin/env python3
+"""
+A Basic flask application
+"""
 from flask import Flask
-i  # !/usr/bin/env python3
-"""
-	flask application
-"""
+from flask import render_template
 
 
 app = Flask(__name__)
 
 
-@app.route("/", strict_slashes=False)
+@app.route('/', strict_slashes=False)
 def index() -> str:
-
-
 """
-	template html de base
+Renders a basic html template
 """
-return render_template("0-index.html")
+    return render_template('0-index.html')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run()
